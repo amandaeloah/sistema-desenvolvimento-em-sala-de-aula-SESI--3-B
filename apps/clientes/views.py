@@ -77,10 +77,10 @@ def login_usuario(request):
                 return redirect('novo_cliente')
             else:
                 return HttpResponse('<h1>Usuário ou senha inválidos<h1>')
-        else:
+    else:
             form = AuthenticationForm()
             context = {
                 'form': form
             }
-        return render(request, template_name, context)
+    return render(request, template_name, context)
  
